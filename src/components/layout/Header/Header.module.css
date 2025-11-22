@@ -1,0 +1,61 @@
+
+.header {
+  /* Header full width, prevent any padding overrides from index.css */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Top-align base, children use self-aline so nav can rest bottom right */
+  width: 100%;
+  height: 200px;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #abd5ba 0%, #5bc0de 50%, #4a90e2 100% );
+  box-sizing: border-box;
+ /* position: relative; /* Optional, for future absolutes if this doesn't jive */
+}
+
+
+.logo {
+/* Ensure the logo fits nicely */
+  flex-shrink: 0;
+  display: block;
+  align-self: center;
+  height: 250px;
+  max-width: 100%; /* Prevents overflow beyond parent */
+  object-fit: contain; /* Ensures image scales without cropping/distortion */
+}
+
+.companyName {
+  align-self: center;
+  margin-left: auto;
+}
+
+.companyName h3 {
+  margin: 0; /*Removes default h3 margin*/
+  font-size: 2 cc.5rem;
+  color: #333;
+}
+
+.siteNav {
+  align-self: flex-end; /* Sets the cross axis to start or "bottom", so the nav rest on bottom of header */
+  /*No need for margin-left: 0, justify-content: space-between set in headerContainer */
+}
+
+.siteNav button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  min-width: 300px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+@media (max-width: 300px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+}

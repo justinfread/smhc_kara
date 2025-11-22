@@ -1,0 +1,13 @@
+.container {
+  min-height: 100vh; /* Make sure footer sticks to the bottom if page is short  */
+  display: flex;
+  flex-direction: column; /* Set main axis to vertical */ 
+  font-size: 'Segoe UI',system-ui, sans-serif;
+}
+
+@media(max-width: 768px) {
+  .appHeader {
+    padding: 0 1rem;
+    height: 60px;
+  }
+}

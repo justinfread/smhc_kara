@@ -1,0 +1,57 @@
+:root {
+  
+  @import url('https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css');
+  
+  /* Typography */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* use css vars for easy theming */
+  --bg-color: #242424;
+  --text-color: rgba(255,255,255,0.87);
+  --primary-color:#646cff;
+  --accent-color: #535bf2;
+
+  /* font smoothing */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Basic link styles (Global) */
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--accent-color)
+}
+
+/* Light mode override */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: *ffffff;
+    --text-color: #213547;
+  }
+  a:hover {
+    --accent-color: #747bff;
+  }
+}
+
+/* Accessibility: Focus styles for interactive elements */
+button:focus, a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
