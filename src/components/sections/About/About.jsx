@@ -10,7 +10,7 @@ const About = () => {
       <div className={styles.container}>
 
         <h1 className={styles.heading}>
-          About Simply Medical Healthcare<br></br>House Calls for Primary Care 
+          About Simply Medical Healthcare<br/>House Calls for Primary Care 
         </h1>
 
         <p className={styles.intro}>
