@@ -1,0 +1,55 @@
+.section       { padding: 140px 20px; background: #f8fffe; }
+.container     { max-width: 1280px; margin: 0 auto; text-align: center; }
+.heading       { font-size: 48px; font-weight: 700; color: #0f766e; margin-bottom: 16px; }
+.subheading    { font-size: 20px; color: #1e293b; margin-bottom: 80px; }
+.grid          { display: grid; gap: 48px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); justify-content: center; }
+.loading       { font-size: 18px; color: #666; }
+
+.avatarName    { display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
+.avatar        { width: 64px; height: 64px; background: linear-gradient(135deg, #0f766e, #115e59); border-radius: 50%; }
+.name          { margin: 0; font-weight: 600; font-size: 20px; color: #111; }
+.stars         { color: #f59e0b; font-size: 26px; letter-spacing: 3px; margin: 12px 0; }
+.text          { font-size: 16px; line-height: 1.8; color: #334155; margin: 0; }
+.date          { margin-top: 32px; text-align: right; font-size: 14px; color: #94a3b8; }
+.cta           { margin-top: 100px; }
+
+/* Modal */
+.modalOverlay  { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.modal         { background: white; padding: 40px; border-radius: 16px; width: 90%; max-width: 520px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+.modalTitle    { color: #0f766e; font-size: 28px; margin: 0 0 32px; text-align: center; }
+.form          { display: flex; flex-direction: column; gap: 24px; }
+.input, .textarea { padding: 18px 20px; font-size: 17px; border: 2px solid #e2e8f0; border-radius: 12px; transition: border 0.2s; }
+.input:focus, .textarea:focus { outline: none; border-color: #0f766e; }
+
+.ratingText    { font-size: 19px; color: #64748b; margin-left: 12px; }
+.modalButtons  { display: flex; gap: 16px; justify-content: center; margin-top: 10px; }
+
+.toggleButton {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.toggleButton button {
+  background-color: #0f766e !important;     /* soft teal background */
+  color: #ccfbf1 !important;                /* teal text */
+  border: 2px solid #0f7660 !important;
+  padding: 14px 32px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s !important;
+}
+
+.toggleButton button:hover {
+  background-color: #0f766d !important;     /* slightly darker on hover */
+  transform: translateY(-2px) !important;
+}
+
+.starRating, .starsInput span {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.filledStar { color: #f59e0b; }
+.emptyStar  { color: #e2e8f0; }
+
+

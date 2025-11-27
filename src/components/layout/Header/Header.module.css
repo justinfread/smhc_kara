@@ -1,4 +1,3 @@
-
 .header {
   /* Header full width, prevent any padding overrides from index.css */
   display: flex;
@@ -7,9 +6,15 @@
   width: 100%;
   height: 200px;
   padding: 1rem 2rem;
-  background: linear-gradient(45deg, #abd5ba 0%, #5bc0de 50%, #4a90e2 100% );
+  background: linear-gradient(135deg, oklch(42.185% 0.07162 185.547) 0%, #115e59 100% );
+  color: #ffffff;
+  font-family: 'Inner', 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 20px 40px;
   box-sizing: border-box;
- /* position: relative; /* Optional, for future absolutes if this doesn't jive */
+  border-radius: 10px;
 }
 
 
@@ -28,34 +33,34 @@
   margin-left: auto;
 }
 
-.companyName h3 {
+.companyName h1 {
   margin: 0; /*Removes default h3 margin*/
-  font-size: 2 cc.5rem;
+  font-size: 5rem;
   color: #333;
 }
 
 .siteNav {
-  align-self: flex-end; /* Sets the cross axis to start or "bottom", so the nav rest on bottom of header */
-  /*No need for margin-left: 0, justify-content: space-between set in headerContainer */
+  align-self: flex-end; 
 }
 
-.siteNav button {
-  padding: 0.5rem 1rem;
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 1rem;
-  min-width: 300px;
-  cursor: pointer;
-  font-size: 0.875rem;
+.siteNav button{
+  border: solid 2px #166864 ;
 }
 
-button:hover {
-  background-color: #357abd;
-}
-
-@media (max-width: 300px) {
-  .headerContainer {
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
+    gap: 20px;
+    padding: 16px 20px;
+  }
+  .nav {
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .companyName {
+    font-size: 24px;
   }
 }
+
