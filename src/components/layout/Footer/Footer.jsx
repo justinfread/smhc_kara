@@ -1,15 +1,52 @@
-import styles from './Footer.module.css'
+import styles from './Footer.module.css';
 
-export default function Footer() {
-  return(
+const Footer = () => {
+  return (
     <footer className={styles.footer}>
-      <img 
-        className={styles.logo} 
-        src='\logo-transparent.png'
-        alt="Company Logo">
-      </img>
-      <h1>I am a Footer</h1>
-      <h2>One day I'll have links and contact information, maybe even adds</h2>
+      <div className={styles.container}>
+
+        {/* Main Footer Content */}
+        <div className={styles.top}>
+          <div className={styles.logoSection}>
+            <img
+              src="\logo-transparent.png"
+              alt="Simply Medical Healthcare"
+              className={styles.logo}
+            />
+            <h3 className={styles.name}>Simply Medical Healthcare</h3>
+          </div>
+
+          <div className={styles.contact}>
+            <p className={styles.phone}>
+              <a href="tel:+19035551234">(903) 555-1234</a>
+            </p>
+            <p className={styles.email}>
+              <a href="mailto:karla@simplymedicaltx.com">karla@simplymedicaltx.com</a>
+            </p>
+            <p className={styles.address}>
+              Based in Corsicana, TX<br />
+              Serving Corsicana, and Surrounding Areas 
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className={styles.bottom}>
+          <p className={styles.copyright}>
+            Â© {new Date().getFullYear()} Simply Medical Healthcare. All rights reserved.
+          </p>
+
+          <div className={styles.quickLinks}>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
+

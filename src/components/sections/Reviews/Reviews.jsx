@@ -58,7 +58,7 @@ const Review = () => {
 
   return (
     <>
-      <section className={styles.section}>
+      <section id='reviews' className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.heading}>What Our Patients Say</h2>
           <p className={styles.subheading}>Real house-call care. Real results.</p>

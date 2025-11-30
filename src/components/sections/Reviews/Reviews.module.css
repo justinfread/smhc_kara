@@ -1,4 +1,4 @@
-.section       { padding: 140px 20px; background: #f8fffe; }
+.section       { padding: 140px 20px; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); }
 .container     { max-width: 1280px; margin: 0 auto; text-align: center; }
 .heading       { font-size: 48px; font-weight: 700; color: #0f766e; margin-bottom: 16px; }
 .subheading    { font-size: 20px; color: #1e293b; margin-bottom: 80px; }

@@ -1,6 +1,5 @@
 
 import styles from './Header.module.css';
-import Button from '../../ui/Button/Button';
 
 export default function Header() {
   return (
@@ -14,12 +13,12 @@ export default function Header() {
       <h1 className={styles.companyName}>
           Simply Medical Healthcare, PLLC
       </h1>
-      <div className={styles.siteNav}>
-        <Button variant='primary' size='md'>Contact</Button>
-        <Button variant='primary' size='md'>Services</Button>
-        <Button variant='primary' size='md'>About</Button>
-        <Button variant='primary' size='md'>Reviews</Button>
-      </div>
+      <nav className={styles.nav}>
+        <a href='#contact' className={styles.navLink}>Contact</a>
+        <a href='#about' className={styles.navLink}>About</a>
+        <a href='#services' className={styles.navLink}>Services</a>
+        <a href='#reviews' className={styles.navLink}>Reviews</a>
+      </nav>
     </header>  
   )
 }

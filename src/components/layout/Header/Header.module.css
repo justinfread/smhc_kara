@@ -17,7 +17,6 @@
   border-radius: 10px;
 }
 
-
 .logo {
 /* Ensure the logo fits nicely */
   flex-shrink: 0;
@@ -37,7 +36,6 @@
   transform: translateY(-2px);
 }
 
-
 .companyName {
   align-self: center;
   margin-left: auto;
@@ -49,12 +47,40 @@
   color: #333;
 }
 
-.siteNav {
-  align-self: flex-end; 
+.nav {
+  display: flex;
+  gap: 44px;
+  align-items: center;
 }
 
-.siteNav button{
-  border: solid 2px #166864 ;
+.navLink {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #ccfbf1;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
 }
 
 /* Mobile */
@@ -73,4 +99,5 @@
     font-size: 24px;
   }
 }
+
 
