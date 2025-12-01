@@ -50,7 +50,7 @@ const About = () => {
           {!isExpanded && <div className={styles.fade}></div>}
         </div>
         <div className={styles.moreAbout}>
-          <br></br><p>Specialty: Nurse Practitioner</p> <p>NPI Number: 1093708448</p>
+          <br></br><p>Specialty: Family Nurse Practitioner</p>
         </div>
 
         <div className={styles.buttonWrapper}>

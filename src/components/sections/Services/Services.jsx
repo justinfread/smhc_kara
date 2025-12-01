@@ -4,19 +4,21 @@ const Services = () => {
   const services = [
     'Acute Care',
     'Chronic Disease Management',
+    'Medication Management',
+    'Medicare Physical',
     'Dementia Care (Mental & Physical)',
-    'Lesion Removal',
     'Palliative Care',
-    'Sutures & Wound Care',
     'Well Child Physicals',
     'Transitional Care',
     'Sports Physicals',
+    'Weight Loss Management',
+    'Sutures & Wound Care',
+    'Preventive Care',
+    'Specialist Referrals',
     'Incision & Drainage',
     'IV Fluids & Medications',
     'Lab Draws & Blood Work',
     'EKG & Diagnostic Testing',
-    'Medication Management',
-    'Preventive Care & Vaccinations',
   ];
 
   return (
