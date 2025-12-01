@@ -1,5 +1,4 @@
 import styles from './Hero.module.css';
-import heroImage from "@/src/assets/images/karla_rodney_croped.jpg"
 
 const Hero = () => {
   return (
@@ -9,7 +8,7 @@ const Hero = () => {
         {/* Karla's Photo */}
         <div className={styles.imageWrapper}>
           <img
-            src={heroImage}
+            src="/hero.jpg"
             alt="Karla Morrow, FNP"
             className={styles.photo}
           />
