@@ -11,7 +11,7 @@
 
 .heading {
   font-size: 52px;
-  font-weight: 600;           /* changed from 800 */
+  font-weight: 600;          
   color: #0f766e;
   margin: 0 0 100px;
   line-height: 1.2;
@@ -39,7 +39,7 @@
 
 .item {
   font-size: 22px;
-  font-weight: 600;           /* 600 everywhere */
+  font-weight: 600;          
   color: #1e293b;
   padding: 16px 0;
   position: relative;
@@ -50,6 +50,35 @@
 .item:hover {
   color: #0f766e;
   padding-left: 12px;
+}
+
+.custom_alert {
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  background: linear-gradient(135deg, #f8fffe 0%, #ecfdf5 100%);
+  max-width: 90vw;
+  width: 480px;
+  box-shadow: 0 20px 50px rgba(13, 148, 136, 0.18);
+  z-index: 9999;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); 
+  padding: 2rem 1.5rem 1.8rem;
+  text-align: center;
+}
+
+.custom_alert h3 {
+  color: #0d9488;
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.custom_alert p {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.05rem;
 }
 
 .check {
@@ -70,7 +99,7 @@
 /* Mobile */
 @media (max-width: 820px) {
   .columns { gap: 60px; }
-  .heading { font-size: 42px; margin-bottom: 80px; }
+  .heading { font-size: 42px; margin-bottom: 40px; }
   .item { font-size: 20px; }
   .check { left: -40px; font-size: 26px; }
 }

@@ -1,6 +1,8 @@
 import styles from './Contact.module.css';
 import Button from '../../ui/Button/Button';
 
+const emailAddress = ''
+
 const Contact = () => {
   return (
     <section id="contact" className={styles.section}>
@@ -18,7 +20,7 @@ const Contact = () => {
           </a>
 
           {/* Email */}
-          <a href="<arielwilliams@simplymedicalhealthcarepllc.onmicrosoft.com>" className={styles.card}>
+          <a href='mailto:ArielWilliams@SimplyMedicalHealthcarePLLC.onmicrosoft.com' className={styles.card}>
             <span className={styles.icon}>Email</span>
             <p className={styles.label}>Email Us</p>
             <p className={styles.info}>Simply Medical</p>
