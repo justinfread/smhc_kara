@@ -1,0 +1,72 @@
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 9999;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(13, 148, 136, 0.92); /* #0d9488 teal */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: none;
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: white;
+
+  /* Start off-screen right + hidden */
+  transform: translateX(120%);
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.45s ease,
+    visibility 0.45s,
+    background 0.25s,
+    box-shadow 0.3s ease;
+}
+
+.backToTop:hover {
+  background: #0d9488;
+  box-shadow: 0 12px 28px rgba(13, 148, 136, 0.4);
+}
+
+.backToTop:hover {
+  transform: translateX(0) translateY(-4px);
+}
+
+.backToTop:active {
+  transform: translateX(0) translateY(-2px);
+}
+
+/* Visible state */
+.backToTop.visible {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Very subtle pulse only on first appearance */
+@keyframes gentlePulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
+  }
+  50% {
+    box-shadow: 0 12px 32px rgba(13, 148, 136, 0.35);
+  }
+}
+
+.backToTop.visible {
+  animation: gentlePulse 2s ease-out 0.6s forwards;
+}
+
+

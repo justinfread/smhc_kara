@@ -66,12 +66,27 @@
   text-align: center;
 }
 
+.custom_alert.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .custom_alert h3 {
   color: #0d9488;
   font-size: 1.75rem;
   margin: 0 0 0.75rem 0;
   font-weight: 600;
   text-decoration: underline;
+}
+
+.custom_alert::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #0d9488;
+  border-radius: 20px 20px 0 0;
 }
 
 .custom_alert p {
@@ -102,4 +117,5 @@
   .heading { font-size: 42px; margin-bottom: 40px; }
   .item { font-size: 20px; }
   .check { left: -40px; font-size: 26px; }
+  .custom_alert {left: -40px;}
 }
