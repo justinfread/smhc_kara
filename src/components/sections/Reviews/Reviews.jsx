@@ -94,7 +94,7 @@ const Review = () => {
               {reviews.length > 5 && (
                 <div className={styles.toggleButton}>
                   <Button variant="outline" size="lg" onClick={() => setShowAll(!showAll)}>
-                    {showAll ? 'Show Less' : `Show All Reviews (${reviews.length})`}
+                    {showAll ? 'Show Less' : `Show All Reviews (${reviews.length - 25})`}
                   </Button>
                 </div>
               )}

@@ -48,8 +48,8 @@ const Services = () => {
 
         <div className={styles.columns}>
           <ul className={styles.list}>
-            {services.slice(0, Math.ceil(services.length / 2)).map((service, i) => (
-              <li key={services.id} 
+            {services.slice(0, Math.ceil(services.length / 2)).map((service) => (
+              <li key={service.id} 
                   className={styles.item} 
                   onClick={() => handleClick(service.description, service.title)}    
               >
@@ -65,8 +65,8 @@ const Services = () => {
             </Card>
           )}
           <ul className={styles.list}>
-            {services.slice(Math.ceil(services.length / 2)).map((service, i) => (
-              <li key={i} 
+            {services.slice(Math.ceil(services.length / 2)).map((service) => (
+              <li key={service.id} 
                   className={styles.item}
                   onClick={() => handleClick(service.description, service.title)}
               >

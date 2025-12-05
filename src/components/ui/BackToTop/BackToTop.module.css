@@ -8,8 +8,8 @@
   height: 52px;
   border-radius: 50%;
   background: rgba(13, 148, 136, 0.92); /* #0d9488 teal */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+ /* backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);*/
 
   border: none;
   box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
