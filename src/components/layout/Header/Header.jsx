@@ -1,25 +1,41 @@
-
+import { useState } from 'react';
+import Hamburger from '../../ui/Hamburger/Hamburger';
 import styles from './Header.module.css';
 
-export default function Header() {
+const Header = () => {
+
+  /** useState for Hamburger Navigation */
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <header className={styles.header}>
-      <img 
-        src='\logo-transparent.png'
-        alt='Company Logo' 
-        className={styles.logo}     
-      />
-      <script type='text/javascript' src='https://www.rapidscansecure.com/siteseal/siteseal.js?code=199,A2B7CB9CADAC45044CF632A4D47EDB9D59A9631B'></script>
-      <h1 className={styles.companyName}>
-          Simply Medical Healthcare, PLLC
-      </h1>
-      <nav className={styles.nav}>
-        <a href='#contact' className={styles.navLink}>Contact</a>
-        <a href='#about' className={styles.navLink}>About</a>
-        <a href='#services' className={styles.navLink}>Services</a>
-        <a href='#reviews' className={styles.navLink}>Reviews</a>
+      {/** Logo */}
+      <div className={styles.logoWrapper}>
+        <img
+          alt="Simply Medical Healthcare logo"
+          className={styles.logo}
+        />
+      </div>
+
+      {/** Company name */}
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>Simply Medical Healthcare, PLLC</h1>
+      </div>
+
+      {/** Navigation: Desktop => 768px width */}
+      <nav className={styles.navWrapper}>
+        <ul className={styles.navList}>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-    </header>  
+      <div className={styles.burger}>
+        <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      </div>
+    </header>
   )
 }
 
+export default Header

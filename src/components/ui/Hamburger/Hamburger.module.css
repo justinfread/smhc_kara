@@ -1,0 +1,59 @@
+.hamburgerWrapper { /* Layout navBurgerList and burger X horizontally*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0rem;
+  align-items: center;
+  background: transparent;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  min-height: 5em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.line {
+  width: 28px;
+  height: 3px;
+  background-color: #333;
+  display: block;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.open span{
+  margin-left: auto;
+}
+
+.open .line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.open .line:nth-child(2) { opacity: 0; }
+.open .line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Set to !open by default */
+.closed .navBurgerList {
+  display: none;
+}
+
+.opened .navBurgerList{
+  display: flex;  
+}
+
+.navBurgerList li {
+  padding: 0.3rem;
+  list-style: none;
+}
+
+.navBurgerList a {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: .75em;              
+  font-weight: 400;
+  text-decoration: underline;
+  text-align: left;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  transition: all 0.25s ease;
+}

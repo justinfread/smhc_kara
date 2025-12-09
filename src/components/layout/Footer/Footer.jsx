@@ -3,13 +3,12 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <div className={styles.fContainer}>
 
         {/* Main Footer Content */}
         <div className={styles.top}>
           <div className={styles.logoSection}>
             <img
-              src="\logo-transparent.png"
               alt="Simply Medical Healthcare"
               className={styles.logo}
             />
@@ -18,10 +17,10 @@ const Footer = () => {
 
           <div className={styles.contact}>
             <p className={styles.phone}>
-              <a href="tel:+19035551234">(903) 555-1234</a>
+              <a href='tel:+19035551234'>1 (903) 869-1405</a>
             </p>
             <p className={styles.email}>
-              <a href="mailto:karla@simplymedicaltx.com">karla@simplymedicaltx.com</a>
+              <a href='mailto:ArielWilliams@SimplyMedicalHealthcarePLLC.onmicrosoft.com'>ArielWilliams@SimplyMedicalHealthcarePLLC.onmicrosoft.com</a>
             </p>
             <p className={styles.address}>
               Based in Corsicana, TX<br />

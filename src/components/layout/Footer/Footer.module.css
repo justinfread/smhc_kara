@@ -26,6 +26,7 @@
 }
 
 .logo {
+  content: url("/images/logo-mobile.png");
   height: 200px;
   border-radius: 16px;
   padding: 8px;
@@ -96,4 +97,36 @@
   color: white;
 }
 
+@media(max-Width: 768px) {
 
+  .fContainer{
+    flex-direction: column;
+    gap: 10px;
+    max-width: 768px;
+    width: 95%;           /* Nearly full width for smaller screens */
+    padding: 10px;        /* Reduce padding to save space */
+    margin: 0 auto;       /* Maintain centering */
+    display: block;       /* Ensure block-level behavior */
+    font-size: 0.9rem;    /* Adjust font size for readability */
+    overflow-x: hidden;   /* Prevent horizontal scrolling */
+  }
+
+  .name {
+    display: none;
+  }
+}
+
+ @media(max-Width: 460px) {
+  .fContainer {
+    flex-direction: column;
+    gap: 5px;
+    max-width: 430px;
+    width: 100%;          
+    padding: 5px;   
+    font-size: 0.3rem;    
+  }
+
+  .contact {
+    display: none;
+  }
+}
