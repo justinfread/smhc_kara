@@ -8,7 +8,7 @@ const Hero = () => {
         {/* Karla's Photo */}
         <div className={styles.imageWrapper}>
           <img
-            src="/images/hero.jpg"
+            src="/images/heroChristmas.jpg"
             alt="Karla Morrow, FNP"
             className={styles.photo}
           />
