@@ -50,6 +50,49 @@
   font-size: large;
 }
 
+.navLink {
+  position: relative;
+  color: #0f766e;                   
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.28s ease;
+}
+
+/* Hover + Focus state */
+.navLink:hover,
+.navLink:focus {
+  color: #18cab5;                    /* slightly darker teal  */
+}
+
+/* Underline that fades in from the center */
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #18cab5;         /* brighter teal accent  */
+  transition: width 0.35s ease, left 0.35s ease;
+}
+
+.navLink:hover::after,
+.navLink:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Active page indicator (Maybe later) */
+.navLink.active {
+  color: #115e59;
+}
+.navLink.active::after {
+  width: 100%;
+  left: 0;
+  background-color: #14b8a6;
+}
+
 /* Nav – hidden by default on mobile */
 .navWrapper {
   display: none;
@@ -154,6 +197,7 @@
 
   .navList a:hover::after {
     /*border: none;*/
+    opacity: 0.5;
   }
 }
 

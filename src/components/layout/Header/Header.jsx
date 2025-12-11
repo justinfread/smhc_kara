@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 const Header = () => {
 
   /** useState for Hamburger Navigation */
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -25,10 +25,10 @@ const Header = () => {
       {/** Navigation: Desktop => 768px width */}
       <nav className={styles.navWrapper}>
         <ul className={styles.navList}>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" className={styles.navLink}>About</a></li>
+          <li><a href="#services" className={styles.navLink}>Services</a></li>
+          <li><a href="#reviews" className={styles.navLink}>Reviews</a></li>
+          <li><a href="#contact" className={styles.navLink}>Contact</a></li>
         </ul>
       </nav>
       <div className={styles.burger}>

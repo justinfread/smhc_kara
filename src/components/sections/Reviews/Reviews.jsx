@@ -24,10 +24,11 @@ const Review = () => {
     };
     fetchReviews();
   }, []);
-
+  
+  // display first five reviews
   const displayedReviews = showAll ? reviews : reviews.slice(0, 5);
 
-  // Perfect star rendering – never breaks
+  // Star rendering
   const StarRating = ({ rating }) => (
     <div className={styles.starRating}>
       {[1, 2, 3, 4, 5].map((star) => (
@@ -94,8 +95,9 @@ const Review = () => {
               {reviews.length > 5 && (
                 <div className={styles.toggleButton}>
                   <Button variant="outline" size="lg" onClick={() => setShowAll(!showAll)}>
-                    {showAll ? 'Show Less' : `Show All Reviews (${reviews.length - 25})`}
+                    {showAll ? 'Show Less' : `Show More Reviews (${reviews.length}`}
                   </Button>
+                  
                 </div>
               )}
             </>
