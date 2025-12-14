@@ -20,7 +20,7 @@ const Footer = () => {
               <a href='tel:+19035551234'>1 (903) 869-1405</a>
             </p>
             <p className={styles.email}>
-              <a href='mailto:ArielWilliams@SimplyMedicalHealthcarePLLC.onmicrosoft.com'>ArielWilliams@SimplyMedicalHealthcarePLLC.onmicrosoft.com</a>
+              <a href='mailto:ArielWilliams@SimplyMedicalHealthcarePLLC.onmicrosoft.com'>Or<br/>Send us an Email</a>
             </p>
             <p className={styles.address}>
               Based in Corsicana, TX<br />

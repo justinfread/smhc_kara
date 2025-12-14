@@ -1,67 +1,95 @@
-.hamburgerWrapper { /* Layout navBurgerList and burger X horizontally*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 0rem;
-  align-items: center;
-  background: transparent;
+/* Hamburger.module.css – fixed top-right X */
+
+.hamburgerWrapper {
+  position: relative;                /* Allows absolute positioning of button */
+  width: 50px;                       /* Fixed width for consistency */
+  height: 50px;
 }
 
+/* The button (hamburger/X) – fixed top-right, never moves */
 .close {
+  position: absolute;
+  top: 0;
+  right: 0;
   background: transparent;
   border: none;
-  min-height: 5em;
+  width: 50px;
+  height: 50px;
   padding: 10px;
   cursor: pointer;
   z-index: 1000;
 }
 
+/* The three lines */
 .line {
   width: 28px;
   height: 3px;
-  background-color: #333;
+  background-color: #fff;            /* White to match header text */
   display: block;
-  margin: 4px 0;
+  margin: 5px 0;
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
 
-.open span{
-  margin-left: auto;
+/* X transformation when open */
+.open .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
-.open .line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.open .line:nth-child(2) { opacity: 0; }
-.open .line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.open .line:nth-child(2) {
+  opacity: 0;
+}
 
-/* Set to !open by default */
+.open .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navigation menu – appears below the fixed X */
 .closed .navBurgerList {
+  /* Hidden by default */
   display: none;
 }
 
-.opened .navBurgerList{
-  display: flex;  
+.opened .navBurgerList {
+  /* Opens when opened */
+  display: flex;
 }
 
-.navBurgerList li {
-  padding: 0.3rem;
+.opened {
+  position: absolute;
+  top: 60px;                         /* Directly below the button */
+  right: 0;
+  background: rgba(17, 94, 89, 0.95); /* Dark teal overlay */
+  min-width: 200px;
+  border-radius: 0 0 0 12px;
+  box-shadow: -4px 4px 12px rgba(0,0,0,0.3);
+  padding: 1rem;
+  z-index: 999;
+}
+
+.navBurgerList {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .navBurgerList a {
-  color: rgba(255, 255, 255, 0.92);
-  font-size: .75em;              
-  font-weight: 400;
-  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.2s ease;
   text-align: left;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
-  transition: all 0.25s ease;
 }
 
-/* Hover + Focus state */
-.navLinkA a:hover,
-.navLinkA a:focus {
-  color: red;                    /* slightly darker teal  */
+.navBurgerList a:hover,
+.navBurgerList a:focus {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
 }
-
-

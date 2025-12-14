@@ -31,9 +31,12 @@ const Header = () => {
           <li><a href="#contact" className={styles.navLink}>Contact</a></li>
         </ul>
       </nav>
+      
+      {/** Hamburger only shows on mobile, top right */}
       <div className={styles.burger}>
         <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </div>
+
     </header>
   )
 }
