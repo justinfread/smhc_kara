@@ -1,5 +1,7 @@
+/* ==================== BASE – ==================== */
+
 .section {
-  padding: 160px 20px;
+  padding: 5rem 1rem 6rem;
   background: linear-gradient(45deg, #f0fdfa 0%, #ccfbf1 100%);
 }
 
@@ -10,25 +12,27 @@
 }
 
 .heading {
-  font-size: 52px;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #0f766e;
-  margin-bottom: 100px;
+  margin-bottom: 3.5rem;
 }
 
 .grid {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-bottom: 80px;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .card {
   background: white;
-  padding: 48px 40px;
-  border-radius: 24px;
-  width: 320px;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 20rem;
   box-shadow: 0 15px 40px rgba(15,118,110,0.12);
   transition: all 0.4s ease;
   text-decoration: none;
@@ -36,39 +40,121 @@
 }
 
 .card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-0.75rem);
   box-shadow: 0 25px 60px rgba(15,118,110,0.2);
 }
 
 .icon {
-  font-size: 56px;
-  margin-bottom: 20px;
+  font-size: 3.5rem;
+  margin-bottom: 1.25rem;
   display: block;
 }
 
 .label {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #64748b;
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
 }
 
 .info {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #0f766e;
   margin: 0;
   line-height: 1.4;
 }
 
-.cta {
-  margin-top: 40px;
-}
-
 .embeddedMap {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;                  /* 300px */
   border: 0;
-  border-radius: 20px;
+  border-radius: 1.25rem;
+  margin-top: 1rem;
 }
 
+.cta {
+  margin-top: 2.5rem;
+}
 
+/* ==================== TABLET – 768px+ ==================== */
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3.25rem;
+  }
+
+  .grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.75rem;
+  }
+
+  .card {
+    max-width: 18.75rem;             /* 300px-ish */
+    padding: 3rem 2.5rem;
+  }
+
+  .icon {
+    font-size: 4rem;
+  }
+
+  .info {
+    font-size: 1.625rem;
+  }
+}
+
+/* ==================== DESKTOP – 1026px+ (matches your original live look) ==================== */
+@media (min-width: 1026px) {
+  .section {
+    padding: 160px 20px;
+  }
+
+  .heading {
+    font-size: 52px;
+    margin-bottom: 100px;
+  }
+
+  .grid {
+    gap: 60px;
+    margin-bottom: 80px;
+  }
+
+  .card {
+    padding: 48px 40px;
+    width: 320px;
+    border-radius: 24px;
+  }
+
+  .card:hover {
+    transform: translateY(-12px);
+  }
+
+  .icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  .label {
+    font-size: 18px;
+    margin: 0 0 12px;
+  }
+
+  .info {
+    font-size: 24px;
+  }
+
+  .embeddedMap {
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  .cta {
+    margin-top: 40px;
+  }
+}
+
+/* ==================== XL – 1200px+ ==================== */
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 auto;
+  }
+}

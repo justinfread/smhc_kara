@@ -45,11 +45,11 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className={styles.cta}>
-          <Button variant="primary" size="xl">
-            Call Now: (903) 869-1405
-          </Button>
-        </div>
+       {!" <div className={styles.cta}>"}
+          {!"<Button variant=   size=  >"}
+            {!"Call Now: (903) 869-1405"}
+          {!"</Button>"}
+        {!"</div>"}
       </div>
     </section>
   );

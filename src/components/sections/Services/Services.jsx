@@ -32,13 +32,13 @@ const Services = () => {
     setAlertDescription(description);
     setAlertTitle(title);
     setShowAlert(true);
-    // Auto-hide after 5 seconds
-    setTimeout(() => setShowAlert(false), 5000);
+    // Auto-hide after 7 seconds
+    setTimeout(() => setShowAlert(false), 7000);
   };
 
 
   return (
-    <section id="services" className={styles.section}>
+    <section id="services" className={styles.wrapper}>
       <div className={styles.container}>
         <h2 className={styles.heading}>
           Services, Conditions

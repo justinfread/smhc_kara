@@ -22,10 +22,10 @@ const Hamburger = ({ isOpen, onClick }) => {
           aria-expanded={isOpen}
         >
           <ul className={styles.navBurgerList}>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li className={styles.navLinkA}><a href="#about">About</a></li>
+            <li className={styles.navLink}><a href="#services">Services</a></li>
+            <li className={styles.navLink}><a href="#reviews">Reviews</a></li>
+            <li className={styles.navLink}><a href="#contact">Contact</a></li>
           </ul>  
         </nav>
         

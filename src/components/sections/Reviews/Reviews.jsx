@@ -7,7 +7,8 @@ import styles from './Reviews.module.css';
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [showAll, setShowAll] = useState(false);
+  const [displayedCount, setDisplayedCount] = useState(5);
+  const [hasExpanded, setHasExpanded] = useState(false); // Tracks if user has clicked Load More
   const [showModal, setShowModal] = useState(false);
   const [form, setForm] = useState({ name: '', rating: 5, text: '' });
   const [submitting, setSubmitting] = useState(false);
@@ -24,11 +25,9 @@ const Review = () => {
     };
     fetchReviews();
   }, []);
-  
-  // display first five reviews
-  const displayedReviews = showAll ? reviews : reviews.slice(0, 5);
 
-  // Star rendering
+  const displayedReviews = reviews.slice(0, displayedCount);
+
   const StarRating = ({ rating }) => (
     <div className={styles.starRating}>
       {[1, 2, 3, 4, 5].map((star) => (
@@ -41,6 +40,17 @@ const Review = () => {
       ))}
     </div>
   );
+
+  const handleLoadMore = () => {
+    setDisplayedCount(prev => Math.min(prev + 5, reviews.length));
+    setHasExpanded(true); // Now show "Show Less" option
+  };
+
+  const handleShowLess = () => {
+    setDisplayedCount(5);
+    setHasExpanded(false); // Optional: hide Show Less until next Load More
+    document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,10 +104,15 @@ const Review = () => {
 
               {reviews.length > 5 && (
                 <div className={styles.toggleButton}>
-                  <Button variant="outline" size="lg" onClick={() => setShowAll(!showAll)}>
-                    {showAll ? 'Show Less' : `Show More Reviews (${reviews.length}`}
-                  </Button>
-                  
+                  {hasExpanded || displayedCount >= reviews.length ? (
+                    <Button variant="outline" size="lg" onClick={handleShowLess}>
+                      Show Less
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="lg" onClick={handleLoadMore}>
+                      Show More ({reviews.length - displayedCount})
+                    </Button>
+                  )}
                 </div>
               )}
             </>
@@ -111,7 +126,7 @@ const Review = () => {
         </div>
       </section>
 
-      {/* MODAL */}
+      {/* MODAL – unchanged */}
       {showModal && (
         <div className={styles.modalOverlay} onClick={() => setShowModal(false)}>
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
@@ -167,4 +182,3 @@ const Review = () => {
 };
 
 export default Review;
-

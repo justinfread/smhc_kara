@@ -1,37 +1,105 @@
-.section       { padding: 140px 20px; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); }
-.container     { max-width: 1280px; margin: 0 auto; text-align: center; }
-.heading       { font-size: 48px; font-weight: 700; color: #0f766e; margin-bottom: 16px; }
-.subheading    { font-size: 20px; color: #1e293b; margin-bottom: 80px; }
-.grid          { display: grid; gap: 48px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); justify-content: center; }
-.loading       { font-size: 18px; color: #666; }
+/* Reviews.module.css – mobile-first version */
 
-.avatarName    { display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
-.avatar        { width: 64px; height: 64px; background: linear-gradient(135deg, #0f766e, #115e59); border-radius: 50%; }
-.name          { margin: 0; font-weight: 600; font-size: 20px; color: #111; }
-.stars         { color: #f59e0b; font-size: 26px; letter-spacing: 3px; margin: 12px 0; }
-.text          { font-size: 16px; line-height: 1.8; color: #334155; margin: 0; }
-.date          { margin-top: 32px; text-align: right; font-size: 14px; color: #94a3b8; }
-.cta           { margin-top: 100px; }
+/* ==================== BASE – MOBILE FIRST ==================== */
 
-/* Modal */
-.modalOverlay  { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000; }
-.modal         { background: white; padding: 40px; border-radius: 16px; width: 90%; max-width: 520px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-.modalTitle    { color: #0f766e; font-size: 28px; margin: 0 0 32px; text-align: center; }
-.form          { display: flex; flex-direction: column; gap: 24px; }
-.input, .textarea { padding: 18px 20px; font-size: 17px; border: 2px solid #e2e8f0; border-radius: 12px; transition: border 0.2s; }
-.input:focus, .textarea:focus { outline: none; border-color: #0f766e; }
+.section {
+  padding: 5rem 1rem 6rem;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+}
 
-.ratingText    { font-size: 19px; color: #64748b; margin-left: 12px; }
-.modalButtons  { display: flex; gap: 16px; justify-content: center; margin-top: 10px; }
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f766e;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;                 /* single column on mobile */
+  justify-content: center;
+}
+
+.loading {
+  font-size: 1.125rem;
+  color: #666;
+}
+
+.avatarName {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #111;
+}
+
+.starRating {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin: 0.75rem 0;
+}
+
+.filledStar {
+  color: #f59e0b;
+}
+
+.emptyStar {
+  color: #e2e8f0;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+}
+
+.date {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.cta {
+  margin-top: 4rem;
+}
 
 .toggleButton {
-  margin-top: 60px;
+  margin-top: 3.5rem;
   text-align: center;
 }
 
 .toggleButton button {
-  background-color: #0f766e !important;     /* soft teal background */
-  color: #ccfbf1 !important;                /* teal text */
+  background-color: #0f766e !important;
+  color: #ccfbf1 !important;
   border: 2px solid #0f7660 !important;
   padding: 14px 32px !important;
   border-radius: 12px !important;
@@ -40,16 +108,177 @@
 }
 
 .toggleButton button:hover {
-  background-color: #0f766d !important;     /* slightly darker on hover */
+  background-color: #0f766d !important;
   transform: translateY(-2px) !important;
 }
 
-.starRating, .starsInput span {
-  font-size: 28px;
-  line-height: 1;
+/* Modal – mobile friendly */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
 }
 
-.filledStar { color: #f59e0b; }
-.emptyStar  { color: #e2e8f0; }
+.modal {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 32.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
 
+.modalTitle {
+  color: #0f766e;
+  font-size: 1.75rem;
+  margin: 0 0 2rem;
+  text-align: center;
+}
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input,
+.textarea {
+  padding: 1.125rem 1.25rem;
+  font-size: 1.0625rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  transition: border 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #0f766e;
+}
+
+.starsInput span {
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ratingText {
+  font-size: 1.1875rem;
+  color: #64748b;
+  margin-left: 0.75rem;
+}
+
+.modalButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.625rem;
+}
+
+/* ==================== TABLET – 768px+ ==================== */
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .subheading {
+    font-size: 1.375rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .modalButtons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ==================== DESKTOP – 1026px+ (matches your original live look) ==================== */
+@media (min-width: 1026px) {
+  .section {
+    padding: 140px 20px;
+  }
+
+  .heading {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .subheading {
+    font-size: 20px;
+    margin-bottom: 80px;
+  }
+
+  .grid {
+    gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .avatarName {
+    gap: 18px;
+    margin-bottom: 16px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .starRating {
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin: 12px 0;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .date {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  .cta {
+    margin-top: 100px;
+  }
+
+  .toggleButton {
+    margin-top: 60px;
+  }
+
+  .modal {
+    padding: 40px;
+    max-width: 520px;
+  }
+
+  .modalTitle {
+    font-size: 28px;
+    margin: 0 0 32px;
+  }
+
+  .input,
+  .textarea {
+    padding: 18px 20px;
+    font-size: 17px;
+  }
+}
+
+/* ==================== XL – 1200px+ ==================== */
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 auto;
+  }
+}

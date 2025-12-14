@@ -57,3 +57,11 @@
   text-shadow: 0 2px 4px rgba(0,0,0,0.7);
   transition: all 0.25s ease;
 }
+
+/* Hover + Focus state */
+.navLinkA a:hover,
+.navLinkA a:focus {
+  color: red;                    /* slightly darker teal  */
+}
+
+
