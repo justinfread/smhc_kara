@@ -117,17 +117,18 @@
 
 /* ==================== DESKTOP – 1026px+ ==================== */
 @media (min-width: 1026px) {
-  .header {
+ .header {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: 15rem;
-    padding: 2rem;
+    flex-wrap: nowrap;           /* Add this – prevents accidental wrapping */
+    align-items: center;     /* Change from default stretch/center */
+    justify-content: space-between;
+    height: 15rem;               /* Or whatever fixed height you want */
     margin: 1rem;
   }
 
   .logoWrapper {
-    margin-right: 2rem;
+    flex-shrink: 0; 
   }
 
   .logo {
@@ -135,14 +136,16 @@
   }
 
   .titleWrapper {
-    width: auto;
-    margin-top: 2.3rem;
-    padding-left: 0;
-    text-align: left;
+    width: auto;                 /* ← THIS IS THE CRITICAL FIX */
+    flex: 1;                     /* ← Grow to fill space between logo and nav */
+    min-width: 0;                /* Allows it to shrink if text is long */
+    margin-top: 2rem;            /* Adjust vertical position as needed */
   }
-
+  
   .title {
-    font-size: 2.3rem;
+    font-size: 2.3rem;            /* Change back from your test 1rem/red */
+    color: rgba(255, 255, 255, 0.92);
+    white-space: nowrap; 
   }
 
   .burger {
@@ -151,8 +154,9 @@
 
   .navWrapper {
     display: flex;
+    align-self: flex-start;
     margin-left: auto;
-    margin-bottom: 0.7rem;
+    padding-left: 35rem;
   }
 
   .navList {
