@@ -42,7 +42,7 @@ const Review = () => {
   );
 
   const handleLoadMore = () => {
-    setDisplayedCount(prev => Math.min(prev + 5, reviews.length));
+    setDisplayedCount(prev => Math.max(prev - 25, reviews.length));
     setHasExpanded(true); // Now show "Show Less" option
   };
 

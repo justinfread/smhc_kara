@@ -1,0 +1,50 @@
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+
+  border: 6px solid grey;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+
+/* ==================== TABLET – 640px+ ==================== */
+@media (min-width: 640px) {
+  .image { max-height: 36rem; }
+}
+
+/* ==================== TABLET LANDSCAPE / SMALL DESKTOP – 768px+ ==================== */
+@media (min-width: 768px) {
+  .imageWrapper {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
+/* ==================== DESKTOP – 1024px+  ==================== */
+@media (min-width: 1024px) {
+  .imageWrapper {
+    min-width: 300px;
+  }
+
+  .image {
+    height: auto;
+    width: 480px;
+  }
+}

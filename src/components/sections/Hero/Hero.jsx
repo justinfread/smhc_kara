@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import HeroSlideshow from './HeroSlideShow';
 
 const Hero = () => {
   return (
@@ -6,12 +7,8 @@ const Hero = () => {
       <div className={styles.container}>
 
         {/* Karla's Photo */}
-        <div className={styles.imageWrapper}>
-          <img
-            src="/images/heroChurchPic.jpg"
-            alt="Karla Morrow, FNP"
-            className={styles.photo}
-          />
+        <div className={styles.photoWrapper}>
+          <HeroSlideshow />
         </div>
 
         {/* Text + Embedded Map */}

@@ -1,3 +1,4 @@
+import Banner from "../components/Banner/Banner"
 import Hero from "../components/sections/Hero"
 import About from "../components/sections/About"
 import Services from "../components/sections/Services"
@@ -8,6 +9,7 @@ import BackToTop from "../components/ui/BackToTop/BackToTop"
 export default function HomePage() {
   return (
     <>
+      <Banner />
       <Hero />
       <About />
       <Services />
